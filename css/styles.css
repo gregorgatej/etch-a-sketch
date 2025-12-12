@@ -19,4 +19,9 @@ html, body {
 
 .column {
     flex: 1;
+    border: grey solid 1px;
+}
+
+.pink {
+    background-color: pink;
 }
