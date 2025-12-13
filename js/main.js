@@ -10,9 +10,22 @@ for (let i = 0; i < 16; i++) {
         }
 }
 
+function randomColorWithOpacity(opacity) {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+}
+
 innerContainerDiv.addEventListener("mouseover", e => {
     if (!e.target.classList.contains("column")) return;
-    e.target.classList.add("pink");
+    if (e.target.dataset.opacity) {
+        const newOpacity = parseFloat(e.target.dataset.opacity) + 0.1;
+        e.target.dataset.opacity = Math.min(newOpacity, 1);
+    } else {
+        e.target.dataset.opacity = 0.1;
+    }
+    e.target.style.backgroundColor = randomColorWithOpacity(parseFloat(e.target.dataset.opacity));
 });
 
 const btn = document.querySelector("button");
