@@ -1,4 +1,4 @@
-const containerDiv = document.querySelector(".container");
+const containerDiv = document.querySelector(".inner-container");
 for (let i = 0; i < 16; i++) {
     const rowDiv = document.createElement("div");
     rowDiv.classList.add("row");
@@ -11,6 +11,6 @@ for (let i = 0; i < 16; i++) {
 }
 
 containerDiv.addEventListener('mouseover', e => {
-    hoveredOverDiv = e.target;
-    hoveredOverDiv.classList.add("pink");
+    if (!e.target.classList.contains("column")) return;
+    e.target.classList.add("pink");
 });

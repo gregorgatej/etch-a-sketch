@@ -3,13 +3,27 @@ html, body {
     height: 100%;
 }
 
-.container {
-    color: blue;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+button {
+    padding: 5px;
+    border: grey solid 2px;
+    color: rgb(68, 68, 68);
+    font-family: monospace;
+    margin: 10px 0px 10px 0px;
+    border-radius: 6px;
+}
+
+.outer-container {
     margin: 0 auto;
     max-width: 100vh;
+
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    height: 93vh;
+    max-width: 100vh;
+    border: grey solid 2px;
 }
 
 .row {
@@ -19,7 +33,7 @@ html, body {
 
 .column {
     flex: 1;
-    border: grey solid 1px;
+    border: grey solid 2px;
 }
 
 .pink {
