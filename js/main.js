@@ -28,18 +28,20 @@ btn.addEventListener("click", e => {
         alert("Try again with inputting a smaller number!");
         nrOfSquares = Number(prompt("Enter nr. of squares per side:"));
     }
-    innerContainerDiv.innerHTML="";
-    for (let i = 0; i < nrOfSquares; i++) {
-    const rowDiv = document.createElement("div");
-    rowDiv.classList.add("row");
-    innerContainerDiv.appendChild(rowDiv);
-        for (let j = 0; j < nrOfSquares; j++) {
-            const columnDiv = document.createElement("div");
-            columnDiv.classList.add("column");
-            rowDiv.appendChild(columnDiv);
-            if (nrOfSquares > 50) {
-            columnDiv.setAttribute("style", "border: grey solid 1px");
-            innerContainerDiv.setAttribute("style", "border: grey solid 1px");
+    if (nrOfSquares) {
+        innerContainerDiv.innerHTML="";
+        for (let i = 0; i < nrOfSquares; i++) {
+        const rowDiv = document.createElement("div");
+        rowDiv.classList.add("row");
+        innerContainerDiv.appendChild(rowDiv);
+            for (let j = 0; j < nrOfSquares; j++) {
+                const columnDiv = document.createElement("div");
+                columnDiv.classList.add("column");
+                rowDiv.appendChild(columnDiv);
+                if (nrOfSquares > 50) {
+                columnDiv.setAttribute("style", "border: grey solid 1px");
+                innerContainerDiv.setAttribute("style", "border: grey solid 1px");
+                }
             }
         }
 }
