@@ -12,6 +12,12 @@ button {
     border-radius: 6px;
 }
 
+button:hover {
+    background-color: rgba(255, 255, 255, 0.877);
+    color: rgba(68, 68, 68, 0.836);
+    cursor: pointer;
+}
+
 .outer-container {
     margin: 0 auto;
     max-width: 100vh;
